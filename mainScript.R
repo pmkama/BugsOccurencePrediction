@@ -30,7 +30,7 @@ trainDataFilteredRows <- trainData[, selectedFeatures]
 
 #Formula
 modelFormula <- as.formula(paste("bugs ~", paste(selectedFeatures, collapse = "+")))
-logRegressionModel <- glm(formula = bugs ~., data = trainDataFilteredRows, family = binomial("logit"))
+logRegressionModel <- glm(bugs ~., data = trainDataFilteredRows, family = binomial("logit"))
 summary(logRegressionModel)
 
 #Variable contributions
